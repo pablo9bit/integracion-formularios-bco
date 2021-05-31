@@ -1,0 +1,51 @@
+<div flex = 33 id="container">
+    <h1>{{ title }}</h1>
+    <p>Complete el formulario con su solicitud.</p>
+  
+    <form [formGroup]="form" >
+      <formly-form [form]="form" [fields]="fields" [model]="model" [options]="options"></formly-form>
+        <div flex = 33>
+          <h1>Usted debe saber</h1>
+        <ul>
+          <li>El/la solicitante como el/la garante deben ser personas hábiles mayores de edad (18 años cumplidos) y hasta  75 años, tener domicilio dentro de la provincia y cidi nivel dos. <a href="https://cidi.cba.gov.ar/portal-publico/que-es"> Más info</a></li>
+          <li>Solicitante, su grupo familiar y garante, No deben tener deudas vencidas de créditos otorgados por del Gobierno de la Provincia de Córdoba.</li>
+        
+        </ul>
+      <h1>A tener en cuenta</h1>
+      <ul>
+        <li>Se otorga un crédito por grupo familiar.</li>
+        <li>Un garante no puede ser solicitante de otro crédito.</li>
+        <li>El solicitante debe debe ser titular de una Cuenta de Caja de Ahorro </li>
+      </ul>
+      
+      <h1>Al formulario generado en esta página le deberá adjuntar</h1>
+      <h2>Solicitante</h2>
+      <ul>
+        <li>Imagen/Foto del DNI (frente y dorso) del solicitante, del cónyuge o conviviente.</li>
+        <li>Imagen/Foto de impuesto o servicio actualizada, donde conste su domicilio real (Impuesto Inmobiliario Provincial o Municipal, Luz, Agua, Gas, Tel. fijo, TV cable, sin excepción).</li>
+        <li>Constancia de finalización de curso de emprendedurismo.</li>
+        <li>•	Podrá agregar una imagen con los cálculos numéricos del emprendimiento , según se le expresó en la parte  “Informe sobre el emprendimiento“</li>
+      </ul>
+      <h2>Garante</h2>
+      <ul>
+        <li>Imagen/Foto del DNI (frente y dorso) del garante y su cónyuge o conviviente.</li>
+        <li>Imagen/Foto de impuesto o servicio actualizada, donde conste domicilio real (Impuesto Inmobiliario Provincial o Municipal, Luz, Agua, Gas, Tel. fijo, TV cable, sin excepción).</li>
+        <li>Imagen/Foto del último recibo de sueldo con antigüedad mayor a 3 meses, donde no figuren ni embargos ni pago de cuota alimentaria, recibo de jubilación o certificado original de ingresos netos expedido por el Consejo Profesional de Ciencias Económicas.</li>
+      </ul>
+  
+      <div flex = 33>
+        <mat-card>
+        <p><button type="button" mat-raised-button color="primary" (click)="createPdf()" [disabled]="!form.valid">Generar Formulario de solicitud de crédito en PDF</button></p>
+        <p>El documento PDF descargado y la documentación mencionada deberá ingresarla en
+        <a href="https://fid.cba.gov.ar/ee-fid-multinota/multinota/#/form/FID/MNOTA_OTRO?reparticion=SEPE01">Mesa de entrada e-tramites </a></p>
+      </mat-card>
+      </div>
+      <p>bancodelagente@cba.gov.ar</p> 
+  
+      </div>
+    </form>
+    
+   <pre>
+      {{model | json}}
+    </pre>
+  </div>
