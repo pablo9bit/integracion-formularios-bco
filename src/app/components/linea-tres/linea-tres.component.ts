@@ -1691,7 +1691,291 @@ export class LineaTresComponent {
         ]
       }
     },
+    
+    //--------------DESCRIPCION DEL PROYECTO ---------- agregar un adjunto carpeta de presentacion
 
+    {
+      className: 'descripcion',
+      template: '<div><h2>Descripcion del proyecto</h2></div>',
+    },
+    {
+      key: 'proyecto',
+      type: 'no repeat',
+      templateOptions: {
+        addText: 'Descripción del Proyecto',
+      },
+      fieldArray: {
+        fieldGroup: [
+
+          //---cambiar a textarea
+          {
+            key: 'descripcion',
+            type: 'textarea',
+            templateOptions: {
+              label: 'Descricpión del proyecto',
+              placeholder: 'Ingrese una descripción del proyecto',
+              rows: 10
+            },
+          },
+
+        ],
+      },
+    },
+
+    //--------------DETERMINAR EL PRECIO DE VENTA ---------
+
+
+    {
+      className: 'precio de venta',
+      template: '<div><h2>Determinar el precio de venta de su producto o servicio principal</h2></div>',
+    },
+    {
+      key: 'precio de venta de su producto o servicio principal',
+      type: 'no repeat',
+      templateOptions: {
+        addText: 'Ingresar campo de precio de venta de su producto o servicio principal',
+      },
+      fieldArray: {
+        fieldGroup: [
+          {
+            key: 'unidades estimadas',
+            type: 'input',
+            templateOptions: {
+              label: 'Unidades estimadas a vender mensualmente',
+              placeholder: '',
+            },
+          },
+
+
+          {
+            key: 'producto',
+            type: 'input',
+            templateOptions: {
+              label: '¿Cual es el producto?',
+              placeholder: '',
+            },
+          },
+          {
+            key: 'costos variables',
+            type: 'no repeat',
+            templateOptions: {
+              addText: 'costos variables',
+            },
+            fieldArray: {
+              fieldGroup: [
+                {
+                  key: 'lista costos variables',
+                  type: 'repeat',
+                  templateOptions: {
+                    addText: 'Agregar costo variable',
+                  },
+                  fieldArray: {
+                    fieldGroup: [
+
+                      {
+                        key: 'detalle materia prima',
+                        type: 'input',
+                        templateOptions: {
+                          label: 'Detalle materia prima',
+                          placeholder: '',
+                        },
+                      },
+                      {
+                        key: 'Pesos x unidad',
+                        type: 'input',
+                        templateOptions: {
+                          label: 'Pesos por unidad',
+                          placeholder: 'Ingrese un monto',
+                          pattern: '\\d{1,25}'
+                        },
+                      },
+                    ]
+                  }
+                },
+                {
+                  key: 'Total costos variables por unidad (A)',
+                  type: 'input',
+                  templateOptions: {
+                    label: 'Total costos variables por unidad (A)',
+                    placeholder: 'Ingrese la suma de los costos variables',
+                    pattern: '\\d{1,25}'
+                  }
+                }
+              ],
+            },
+          },
+          {
+            key: 'costos fijos',
+            type: 'no repeat',
+            templateOptions: {
+              addText: 'costos fijos',
+            },
+            fieldArray: {
+              fieldGroup: [
+                {
+                  key: 'lista costos fijos',
+                  type: 'repeat',
+                  templateOptions: {
+                    addText: 'Agregar costo fijo',
+                  },
+                  fieldArray: {
+                    fieldGroup: [
+
+                      {
+                        key: 'detalle',
+                        type: 'input',
+                        templateOptions: {
+                          label: 'Detalle (Incluya gas, impuestos, movilidad, cuota crédito, etc. vinculados con el emprendimiento',
+                          placeholder: 'Ingrese un detalle',
+                        },
+                      },
+                      {
+                        key: 'Pesos x unidad',
+                        type: 'input',
+                        templateOptions: {
+                          label: 'Pesos por unidad',
+                          placeholder: 'Ingrese un monto',
+                          pattern: '\\d{1,25}'
+                        },
+                      },
+                    ]
+                  }
+                },
+                {
+                  key: 'Total costos fijos por unidad (B)',
+                  type: 'input',
+                  templateOptions: {
+                    label: 'Total costos fijos por unidad (B)',
+                    placeholder: 'Ingrese la suma de los costos fijos',
+                    pattern: '\\d{1,25}'
+                  }
+                }
+              ],
+            },
+          },
+          {
+            key: 'Precio de venta unitario',
+            type: 'input',
+            templateOptions: {
+              label: 'Precio de venta unitario',
+              placeholder: 'Total de costos variables (A) + Total de costos fijos (B) + Ganancia (estimar)',
+              pattern: '\\d{1,25}'
+            }
+          }
+        ]
+      }
+    },
+
+    // falta cuadro costos fijos
+
+    //----------VENTA INGRESOS MENSUALES---------
+
+
+    {
+      className: 'Venta de Ingresos mensuales',
+      template: '<div><h2>Venta de Ingresos Mensuales</h2></div>',
+    },
+    {
+      key: 'listado de productos',
+      type: 'repeat',
+      templateOptions: {
+        addText: 'listado de productos',
+      },
+      fieldArray: {
+        fieldGroup: [
+
+          {
+            key: 'Listado de procuctos y/o servicios a vender',
+            type: 'input',
+            templateOptions: {
+              label: 'Listado de procuctos y/o servicios a vender',
+              placeholder: '',
+            },
+          },
+
+          {
+            key: 'cantidad',
+            type: 'input',
+            templateOptions: {
+              label: 'Cantidad a vender por mes',
+              placeholder: 'ingrese cantidad en unidades',
+            },
+          },
+          {
+            key: 'precio',
+            type: 'input',
+            templateOptions: {
+              label: 'Precio del producto',
+              placeholder: '',
+            },
+          },
+          {
+            key: 'ingreso mensual total',
+            type: 'input',
+            templateOptions: {
+              label: 'Ingreso mensual total',
+              placeholder: '',
+            },
+          },
+        ],
+      },
+    },
+
+    //----------GASTOS MENSUALES---------
+
+
+    {
+      className: 'gastos mensuales',
+      template: '<div><h2>Gastos mensuales</h2></div>',
+    },
+    {
+      key: 'gastos',
+      type: 'repeat',
+      templateOptions: {
+        addText: 'Gastos mensuales',
+      },
+      fieldArray: {
+        fieldGroup: [
+
+
+          {
+            key: 'detalle los gastos y costos mensuales',
+            type: 'input',
+            templateOptions: {
+              label: 'Detalle los gastos y costos mensuales para generar y vender sus productos y servicios',
+              placeholder: '',
+            },
+          },
+          {
+            key: 'cantidad',
+            type: 'input',
+            templateOptions: {
+              label: 'cantidad',
+              placeholder: '',
+            },
+          },
+          {
+            key: 'importe',
+            type: 'input',
+            templateOptions: {
+              label: 'importe',
+              placeholder: '',
+            },
+          },
+
+          {
+            key: 'total',
+            type: 'input',
+            templateOptions: {
+              label: 'Ingreso total mensual',
+              placeholder: '',
+            },
+          },
+        ],
+      },
+    },
+
+    //----------------------
   ]
 
   createPdf() {

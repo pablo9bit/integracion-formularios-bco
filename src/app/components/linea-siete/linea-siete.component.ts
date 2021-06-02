@@ -1737,35 +1737,35 @@ export class LineaSieteComponent {
                   fieldArray: {
                     fieldGroup: [
 
-                {
-                  key: 'detalle materia prima',
-                  type: 'input',
-                  templateOptions: {
-                    label: 'Detalle materia prima',
-                    placeholder: '',
-                  },
+                      {
+                        key: 'detalle materia prima',
+                        type: 'input',
+                        templateOptions: {
+                          label: 'Detalle materia prima',
+                          placeholder: '',
+                        },
+                      },
+                      {
+                        key: 'Pesos x unidad',
+                        type: 'input',
+                        templateOptions: {
+                          label: 'Pesos por unidad',
+                          placeholder: 'Ingrese un monto',
+                          pattern: '\\d{1,25}'
+                        },
+                      },
+                    ]
+                  }
                 },
                 {
-                  key: 'Pesos x unidad',
+                  key: 'Total costos variables por unidad (A)',
                   type: 'input',
                   templateOptions: {
-                    label: 'Pesos por unidad',
-                    placeholder: 'Ingrese un monto',
+                    label: 'Total costos variables por unidad (A)',
+                    placeholder: 'Ingrese la suma de los costos variables',
                     pattern: '\\d{1,25}'
-                  },
-                },
-              ]
-            }
-          },
-          {
-            key: 'Total costos variables por unidad (A)',
-            type: 'input',
-            templateOptions:{
-              label: 'Total costos variables por unidad (A)',
-              placeholder: 'Ingrese la suma de los costos variables',
-              pattern: '\\d{1,25}'
-            }
-          }
+                  }
+                }
               ],
             },
           },
@@ -1786,42 +1786,42 @@ export class LineaSieteComponent {
                   fieldArray: {
                     fieldGroup: [
 
-                {
-                  key: 'detalle',
-                  type: 'input',
-                  templateOptions: {
-                    label: 'Detalle (Incluya gas, impuestos, movilidad, cuota crédito, etc. vinculados con el emprendimiento',
-                    placeholder: 'Ingrese un detalle',
-                  },
+                      {
+                        key: 'detalle',
+                        type: 'input',
+                        templateOptions: {
+                          label: 'Detalle (Incluya gas, impuestos, movilidad, cuota crédito, etc. vinculados con el emprendimiento',
+                          placeholder: 'Ingrese un detalle',
+                        },
+                      },
+                      {
+                        key: 'Pesos x unidad',
+                        type: 'input',
+                        templateOptions: {
+                          label: 'Pesos por unidad',
+                          placeholder: 'Ingrese un monto',
+                          pattern: '\\d{1,25}'
+                        },
+                      },
+                    ]
+                  }
                 },
                 {
-                  key: 'Pesos x unidad',
+                  key: 'Total costos fijos por unidad (B)',
                   type: 'input',
                   templateOptions: {
-                    label: 'Pesos por unidad',
-                    placeholder: 'Ingrese un monto',
+                    label: 'Total costos fijos por unidad (B)',
+                    placeholder: 'Ingrese la suma de los costos fijos',
                     pattern: '\\d{1,25}'
-                  },
-                },
-              ]
-            }
-          },
-          {
-            key: 'Total costos fijos por unidad (B)',
-            type: 'input',
-            templateOptions:{
-              label: 'Total costos fijos por unidad (B)',
-              placeholder: 'Ingrese la suma de los costos fijos',
-              pattern: '\\d{1,25}'
-            }
-          }
+                  }
+                }
               ],
             },
           },
           {
             key: 'Precio de venta unitario',
             type: 'input',
-            templateOptions:{
+            templateOptions: {
               label: 'Precio de venta unitario',
               placeholder: 'Total de costos variables (A) + Total de costos fijos (B) + Ganancia (estimar)',
               pattern: '\\d{1,25}'
