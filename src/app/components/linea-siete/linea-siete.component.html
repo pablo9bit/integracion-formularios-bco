@@ -1,0 +1,56 @@
+<div>
+    <!-- <img src="assets\cabeceraweb.png" alt="">-->
+   </div>
+   
+   <div flex = 33 id="container">
+     <!--<h1>{{ title }}</h1>-->
+     <h1>LINEA 7 - MICROPRÉSTAMOS PRODUCTIVOS INDIVIDUALES Y ASOCIATIVOS A TRAVÉS DE ONG – GRUPOS SOLIDARIOS</h1>
+         <ul>
+           <li>DESTINATARIOS: Jefes de familia con hijos a cargo (los mismos deben estar escolarizados en caso que les correspondiera por edad) que necesiten financiamiento para el desarrollo de un microemprendimiento productivo, comercial y/o de servicios existente o en formación. Pudiendo éstas realizar su emprendimiento en forma individual o asociativa.</li>
+           <li>OBJETIVOS: Adquisición de capital de trabajo, compra de bienes de capital u otros bienes que permitan mejorar la rentabilidad del emprendimiento, mejoramiento de instalaciones, etc.</li>
+           <!-- <li>5) Presentar fotocopia de carnet de CIDI (Ciudadano Digital - Gobierno de la Provincia de Córdoba). Salvo puntuales excepciones.</li>-->
+           <li>TIPO DE FINANCIAMIENTO: Préstamo</li>
+           <li>MONTO MÁXIMO: Proyectos individuales: $13.500 – Proyectos asociativos: $36.000 (Se abonará un máximo de $7.200 por cada socio integrante).</li>
+           <li>NTERÉS: Sin interés.</li>
+           <li>PLAZO DE DEVOLUCIÓN: Hasta 25 cuotas.</li>
+           <li>VALOR ESTIMADO DE LA CUOTA: Proyectos individuales: $540– Proyectos asociativos: $1.440 </li>
+           <li>GARANTÍA: Proyectos individuales: garantías solidarias entre los integrantes del grupo – Proyectos asociativos: Todos los socios son cotitulares a la vez, del proyecto presentado. Es decir son garantes solidarios.</li>
+           <li>MODALIDAD DE PAGO DEL CRÉDITO: Proyectos individuales: A todos los integrantes del grupo se le otorgará el mismo importe de micropréstamo y en la misma cantidad de cuotas – Proyectos asociativos: los integrantes de la sociedad designarán un apoderado para el cobro del crédito y emisión de cuponera a su nombre.</li>
+   
+         </ul>
+     <form [formGroup]="form" >
+       <formly-form [form]="form" [fields]="fields" [model]="model" [options]="options"></formly-form>
+         <div flex = 33>
+   
+       <mat-card>
+   
+       <p><strong>Al formulario generado en esta página </strong> le deberá adjuntar archivo: foto, imagen de:</p>
+       <h3>Solicitante</h3>
+       <ul>
+         <li>Imagen/Foto del DNI (frente y dorso) del solicitante, del cónyuge o conviviente.</li>
+         <li>Imagen/Foto de impuesto o servicio actualizada, donde conste su domicilio real (Impuesto Inmobiliario Provincial o Municipal, Luz, Agua, Gas, Tel. fijo, TV cable, sin excepción).</li>
+       </ul>
+       <h3>Garante</h3>
+       <ul>
+         <li>Imagen/Foto del DNI  (frente y dorso) del garante y su cónyuge o conviviente</li>
+         <li>Imagen/Foto de impuesto o servicio actualizada, donde conste domicilio real (Impuesto Inmobiliario Provincial o Municipal, Luz, Agua, Gas, Tel. fijo, TV cable, sin excepción).</li>
+         <li>Imagen/Foto del último recibo de sueldo con antigüedad mayor a 3 meses, donde no figuren ni embargos ni pago de cuota alimentaria, recibo de jubilación o certificado original de ingresos netos expedido por el Consejo Profesional de Ciencias Económicas.</li>
+       </ul>
+   
+       <div flex = 33>
+         <p><button type="button" mat-raised-button color="primary" (click)="createPdf()" [disabled]="!form.valid">Generar Formulario de solicitud de crédito en PDF</button></p>
+         <p>El documento PDF descargado y la documentación mencionada deberá ingresarla en
+         <a href="https://fid.cba.gov.ar/ee-fid-multinota/multinota/#/form/FID/MNOTA_OTRO?reparticion=SEPE01">Mesa de entrada e-tramites </a></p>
+       </div>
+     </mat-card>
+   
+       <p>bancodelagente@cba.gov.ar</p>
+   
+       </div>
+     </form>
+   
+   <!--  <pre>
+       {{model | json}}
+     </pre>-->
+   </div>
+   

@@ -1,0 +1,30 @@
+img {
+    width: 100%;
+    height: auto;
+  }
+a {
+    color: rgb(2, 2, 2);
+}
+button.mat-button-base {
+    margin-left: 8px;
+  }
+#container {
+    max-width: 700px;
+    display: table;
+    margin: 0 auto;
+}
+
+#head {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.button-title{
+    padding: 5px 50px 5px 50px; 
+}
+formly-form {
+    display: block;
+    margin-bottom: 2rem;
+}
+.mat-flat-button.mat-primary{
+    background-color: red;
+}

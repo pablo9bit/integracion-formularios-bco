@@ -35,6 +35,9 @@ import { from } from 'rxjs';
 import { LineaCuatroComponent } from './components/linea-cuatro/linea-cuatro.component';
 import { LineaUnoComponent } from './components/linea-uno/linea-uno.component';
 import { LineaTresComponent } from './components/linea-tres/linea-tres.component';
+import { LineaCincoComponent } from './components/linea-cinco/linea-cinco.component';
+import { LineaSeisComponent } from './components/linea-seis/linea-seis.component';
+import { LineaSieteComponent } from './components/linea-siete/linea-siete.component';
 
 export function validateRequired(err, field: FormlyFieldConfig) {
 	return `${field.key} es requerido`
@@ -61,7 +64,7 @@ export function IpValidatorMessage(err, field: FormlyFieldConfig) {
 }
 
 @NgModule({
-	declarations: [AppComponent, RepeatTypeComponent, NoRepeatTypeComponent, FormlyFieldButton, LineaDosComponent, IndiceComponent, LineaCuatroComponent, LineaUnoComponent, LineaTresComponent],
+	declarations: [AppComponent, RepeatTypeComponent, NoRepeatTypeComponent, FormlyFieldButton, LineaDosComponent, IndiceComponent, LineaCuatroComponent, LineaUnoComponent, LineaTresComponent, LineaCincoComponent, LineaSeisComponent, LineaSieteComponent],
 	imports: [
 		BrowserModule,
 		HttpClientModule,
