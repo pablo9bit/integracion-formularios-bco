@@ -38,6 +38,7 @@ import { LineaTresComponent } from './components/linea-tres/linea-tres.component
 import { LineaCincoComponent } from './components/linea-cinco/linea-cinco.component';
 import { LineaSeisComponent } from './components/linea-seis/linea-seis.component';
 import { LineaSieteComponent } from './components/linea-siete/linea-siete.component';
+import { ProductivaIndividualComponent } from './components/productiva-individual/productiva-individual.component';
 
 export function validateRequired(err, field: FormlyFieldConfig) {
 	return `${field.key} es requerido`
@@ -64,7 +65,7 @@ export function IpValidatorMessage(err, field: FormlyFieldConfig) {
 }
 
 @NgModule({
-	declarations: [AppComponent, RepeatTypeComponent, NoRepeatTypeComponent, FormlyFieldButton, LineaDosComponent, IndiceComponent, LineaCuatroComponent, LineaUnoComponent, LineaTresComponent, LineaCincoComponent, LineaSeisComponent, LineaSieteComponent],
+	declarations: [AppComponent, RepeatTypeComponent, NoRepeatTypeComponent, FormlyFieldButton, LineaDosComponent, IndiceComponent, LineaCuatroComponent, LineaUnoComponent, LineaTresComponent, LineaCincoComponent, LineaSeisComponent, LineaSieteComponent, ProductivaIndividualComponent],
 	imports: [
 		BrowserModule,
 		HttpClientModule,
