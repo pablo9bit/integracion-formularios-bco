@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
 import { FormGroup } from '@angular/forms'
 import { FormlyFieldConfig, FormlyFormOptions } from '@ngx-formly/core'
+import { AnyTxtRecord } from 'dns'
 import jsPDF from 'jspdf'
 import { switchMap } from 'rxjs/operators'
 import { DataService } from '../../../core/data.service'
@@ -1763,7 +1764,10 @@ export class ProductivaIndividualComponent {
               placeholder: 'Monto',
             },
             expressionProperties: {
-              'defaultValue': '"model.Autogarante"'
+              'defaultValue': function($viewValue, $modelValue, scope) {
+                console.log($viewValue)
+                return $viewValue['cantidad de cuotas']
+              }
             },
             
           },
