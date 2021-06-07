@@ -1,7 +1,6 @@
 import { Component } from '@angular/core'
 import { FormGroup } from '@angular/forms'
 import { FormlyFieldConfig, FormlyFormOptions } from '@ngx-formly/core'
-import { AnyTxtRecord } from 'dns'
 import jsPDF from 'jspdf'
 import { switchMap } from 'rxjs/operators'
 import { DataService } from '../../../core/data.service'
@@ -1756,19 +1755,26 @@ export class ProductivaIndividualComponent {
             }
           },
           {
-            key: 'monto solicitado',
+            key: 'monto_solicitado',
             type: 'input',
             templateOptions: {
               label: 'Monto solicitado',
-              //disabled: true,
               placeholder: 'Monto',
+              disabled: true,
             },
-            expressionProperties: {
-              'defaultValue': function($viewValue, $modelValue, scope) {
-                console.log($viewValue)
-                return $viewValue['cantidad de cuotas']
+            expressionProperties:{
+              onfocus:($event)=>{ //Cuando hace focus al no repeat(no se por que, solo se que funciona)
+                var clase_contentedora: any = this.form.get('Linea') //Agarra el elemento que está en este, o podria se otro no repeat
+                console.log(clase_contentedora.value[0]) // Notese que necesitamos, el valor que esta contenido en el elemento, [0] porque es no repeat asi que es el unico elemento
+                var tipoId = clase_contentedora.value[0]['tipoId'] //Aqui obtiene el valor del elemento que queremos buscar
+                try{
+                  var monto_solicitado: any = clase_contentedora.controls[0] // Aqui, en vez de los valores queremos editar un campo, entonces agarramos el control del elemento que queremos escribir
+                  monto_solicitado.get('monto_solicitado').setValue(tipoId) // Seleccionamos el campo que queremos modificar y le seteamos el valor
+                }catch (e){
+                  console.log(e) // este try es porque al principio el valor es null y no puedo asignarle null a un elemento
+                }
               }
-            },
+            }
             
           },
           {
