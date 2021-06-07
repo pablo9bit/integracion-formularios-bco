@@ -9,6 +9,7 @@ import { LineaCuatroComponent } from './components/linea-cuatro/linea-cuatro.com
 import { LineaCincoComponent } from './components/linea-cinco/linea-cinco.component'
 import { LineaSeisComponent } from './components/linea-seis/linea-seis.component'
 import { LineaSieteComponent } from './components/linea-siete/linea-siete.component'
+import { ProductivaIndividualComponent } from './components/productiva-individual/productiva-individual.component'
 import { from } from 'rxjs';
 
 
@@ -44,6 +45,10 @@ const routes: Routes = [
   {
     path: 'linea-7',
     component: LineaSieteComponent
+  },
+  {
+    path: 'productiva-individual',
+    component: ProductivaIndividualComponent
   }
 ];
 
